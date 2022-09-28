@@ -17,6 +17,7 @@ class PostList extends React.Component {
 						<div className="description">
 							<h2>{post.title}</h2>
 							<p>{post.body}</p>
+							<UserHeader userId={post.userId} />
 						</div>
 					</div>
 				</div>
@@ -32,7 +33,6 @@ class PostList extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-	console.log(state);
 	return { posts: state.posts };
 }
 
